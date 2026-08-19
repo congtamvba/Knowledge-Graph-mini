@@ -1,0 +1,33 @@
+Bạn là AI Coding Agent hỗ trợ tôi thực hiện bài thực hành Buổi 16: Đánh giá hiệu năng hệ thống RAG (RAG Evaluation) bằng Ragas.
+
+Toàn bộ code và cấu hình của bài này phải được triển khai trực tiếp bên trong thư mục `buoi_14/`.
+Thông tin kết nối và API Key sẽ được đọc từ file cấu hình của tôi tại `buoi_14/.env` (bao gồm HF_TOKEN, NEO4J_*, GEMINI_API_KEY).
+
+Nhiệm vụ: Thiết kế và thực thi một tập lệnh duy nhất `buoi_14/scripts/evaluate_rag_pipeline.py` để tự động hóa toàn bộ quy trình đánh giá hệ thống RAG.
+
+YÊU CẦU CHI TIẾT:
+1. Viết tập lệnh `evaluate_rag_pipeline.py` thực hiện tuần tự các bước sau:
+
+   a. Sinh bộ câu hỏi thử nghiệm (Golden Dataset):
+      - Đọc dữ liệu từ `buoi_14/data/processed/chunks_secure.csv`.
+      - Chọn ngẫu nhiên khoảng 10-15 chunks tiêu biểu thuộc các nhóm bảo mật khác nhau (HR, Risk, Common).
+      - Tự sinh 20 câu hỏi (`question`) và đáp án chuẩn (`ground_truth`) dựa trên nội dung chunks nguồn đó.
+      - Phân bổ câu hỏi theo nhóm độ khó ("easy", "medium", "hard") và loại usecase (HR, Risk, Common).
+      - Lưu bộ câu hỏi này ra `buoi_14/data/eval/qa_dataset.csv`.
+
+   b. Chạy RAG Pipeline để thu thập kết quả sinh câu trả lời:
+      - Đọc tệp `qa_dataset.csv` vừa tạo.
+      - Với mỗi câu hỏi, gọi hàm retrieve của `SecureRetriever` trong `buoi_14/src/secure_retriever.py` (giả định vai trò người dùng có toàn quyền để lấy đủ ngữ cảnh: `["Admin", "HR", "Risk_Manager", "Staff"]`) để thu được danh sách văn bản ngữ cảnh (`contexts`).
+      - Gửi câu hỏi kèm `contexts` đến mô hình "Qwen/Qwen2.5-7B-Instruct:deepinfra" qua HF Router để sinh câu trả lời RAG (`answer`) dựa trên prompt template yêu cầu chỉ trả lời dựa trên ngữ cảnh được cung cấp, không suy diễn ngoài context.
+
+   c. Chạy Ragas đánh giá 4 metrics: Context Precision, Context Recall, Faithfulness, và Answer Relevancy:
+      - Cấu hình LLM trọng tài (Judger) sử dụng `ChatOpenAI` gọi mô hình "deepseek-ai/DeepSeek-V3:deepinfra" trỏ qua HF Router (base_url="https://router.huggingface.co/v1", api_key=os.environ["HF_TOKEN"]).
+      - Chạy chấm điểm Ragas và lưu kết quả chi tiết từng câu hỏi ra `buoi_14/data/eval/evaluation_results.csv`.
+
+   d. Viết báo cáo đánh giá tự động:
+      - Phân tích điểm số từ file kết quả chấm điểm.
+      - Tự động ghi nhận và xuất báo cáo chi tiết ra tệp `buoi_14/outputs/ragas_evaluation_report.md` (bao gồm: bảng tóm tắt điểm trung bình của 4 metrics, phân tích nguyên nhân lỗi đối với các câu hỏi có điểm số thấp < 0.7, và đề xuất tối ưu hóa hệ thống).
+
+2. Thực thi tập lệnh này ngay lập tức để hoàn thành toàn bộ quy trình, in ra điểm trung bình của 4 metrics thu được và hiển thị báo cáo mẫu lên màn hình.
+
+Hãy viết code, giải thích từng bước logic, thực thi script này và báo cáo kết quả đánh giá.

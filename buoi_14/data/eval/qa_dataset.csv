@@ -1,0 +1,40 @@
+question_id,question,ground_truth,difficulty,usecase,source_chunk_id
+q_01,"What is discussed in this document about g) Quản lý thành viên, thông báo nghị quyết, quyết?","g) Quản lý thành viên, thông báo nghị quyết, quyết định của Đại hội thành viên tới các thành viên chính thức, thành viên liên kết góp vốn; kết nạp, chấm dứt tư cách thành viên liên kết không góp vốn theo quy định của Luật này, Điều lệ và báo cáo với Đại hội thành viên gần nhất; tuyển dụng lao động; ",easy,HR,166269-chunk-0096
+q_02,"What is discussed in this document about g) Danh sách nhân sự dự kiến được bầu, bổ nhiệm cá?","g) Danh sách nhân sự dự kiến được bầu, bổ nhiệm các chức danh thành viên Hội đồng quản trị, Hội đồng thành viên, Ban kiểm soát, Tổng giám đốc (Giám đốc) của tổ chức tín dụng chuyển đổi hình thức pháp lý;
+h) Tài liệu chứng minh việc các nhân sự dự kiến đáp ứng đủ tiêu chuẩn, điều kiện đối với các chứ",medium,HR,174218-chunk-0030
+q_03,"What is discussed in this document about Điều 72. Điều kiện, hồ sơ, trình tự và thủ tục giả?","Điều 72. Điều kiện, hồ sơ, trình tự và thủ tục giải thể doanh nghiệp môi giới bảo hiểm
+1. Doanh nghiệp môi giới bảo hiểm chỉ được giải thể khi bảo đảm thanh toán hết các khoản nợ, nghĩa vụ tài sản khác và không trong quá trình giải quyết tranh chấp tại Tòa án hoặc Trọng tài. Người quản lý có liên qu",hard,HR,163441-chunk-0141
+q_04,What is discussed in this document about Điều 76. Tiêu chuẩn chung của người quản lý của do?,"Điều 76. Tiêu chuẩn chung của người quản lý của doanh nghiệp môi giới bảo hiểm
+1. Có quyền quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp.
+2. Không bị xử phạt vi phạm hành chính trong lĩnh vực kinh doanh bảo hiểm, không bị xử lý kỷ luật dưới hình thức sa thải do vi phạm quy trình nội bộ tr",easy,HR,163441-chunk-0147
+q_05,What is discussed in this document about Tên đầy đủ của doanh nghiệp bảo hiểm/doanh nghiệp ?,"Tên đầy đủ của doanh nghiệp bảo hiểm/doanh nghiệp tái bảo hiểm/chỉ nhánh nước ngoài tại Việt Nam/doanh nghiệp môi giới bảo hiểm:
+Tên giao dịch:
+Tên viết tắt:
+Tên bằng tiếng nước ngoài:
+c) Lý do thay đổi: ...
+Công ty sẽ hoàn tất các thủ tục liên quan và cam kết chịu trách nhiệm trước pháp luật về tín",medium,HR,163441-chunk-0233
+q_06,"What is discussed in this document about Chương II
+SÁP NHẬP, HỢP NHẤT TỔ CHỨC TÍN DỤNG?","Chương II
+SÁP NHẬP, HỢP NHẤT TỔ CHỨC TÍN DỤNG",hard,Risk,174218-chunk-0011
+q_07,"What is discussed in this document about d) Tổ chức tín dụng, chi nhánh ngân hàng nước ngoà?","d) Tổ chức tín dụng, chi nhánh ngân hàng nước ngoài quy định việc giao nhận giấy tờ có giá trong hệ thống.",easy,Risk,44209-chunk-0019
+q_08,What is discussed in this document about “6a. Trường hợp thị trường tài chính trong nước và?,"“6a. Trường hợp thị trường tài chính trong nước và quốc tế có biến động, trường hợp phương pháp đánh giá xếp hạng của các tổ chức xếp hạng tín nhiệm có uy tín trên thế giới có thay đổi và các trường hợp khác có ảnh hưởng tới việc tuân thủ tiêu chuẩn, hạn mức đầu tư dự trữ ngoại hối nhà nước, Cục Quả",medium,Risk,169221-chunk-0003
+q_09,What is discussed in this document about Điều 23. Điều kiện để được cấp giấy chứng nhận đăn?,"Điều 23. Điều kiện để được cấp giấy chứng nhận đăng ký hoạt động nhận ủy thác đầu tư gián tiếp ra nước ngoài
+1. Để được thực hiện hoạt động nhận ủy thác đầu tư gián tiếp ra nước ngoài, tổ chức nhận ủy thác phải được cơ quan có thẩm quyền cấp giấy chứng nhận đăng ký hoạt động nhận ủy thác đầu tư gián",hard,Risk,95652-chunk-0033
+q_10,"What is discussed in this document about a) Tổ chức tự doanh, tổ chức nhận ủy thác được mở ?","a) Tổ chức tự doanh, tổ chức nhận ủy thác được mở tài khoản ngoại tệ tại nước ngoài để thực hiện các giao dịch thu, chi liên quan đến hoạt động đầu tư gián tiếp ở nước ngoài theo quy định của nước sở tại;
+b) Tổ chức tự doanh, tổ chức nhận ủy thác chỉ được mở tài khoản ngoại tệ tại nước ngoài theo qu",easy,Risk,95652-chunk-0015
+q_11,What is discussed in this document about 5. Trong thời hạn 01 năm kể từ ngày Nghị định này ?,"5. Trong thời hạn 01 năm kể từ ngày Nghị định này có hiệu lực, doanh nghiệp bảo hiểm nhân thọ phải thực hiện rà soát và đăng ký với Bộ Tài chính phương pháp trích lập dự phòng nghiệp vụ đối với phần liên kết chung đảm bảo giá trị dự phòng theo quy định tại Nghị định này.
+6. Đối với các hợp đồng bảo ",medium,Common,163441-chunk-0090
+q_12,"What is discussed in this document about Điều 12. Chế độ lưu trữ tài liệu
+1. Hợp tác xã, li?","Điều 12. Chế độ lưu trữ tài liệu
+1. Hợp tác xã, liên hiệp hợp tác xã phải lưu trữ theo quy định của pháp luật tài liệu sau:
+a) Điều lệ và các quy chế của hợp tác xã, liên hiệp hợp tác xã; sổ đăng ký thành viên chính thức, thành viên liên kết góp vốn;
+b) Giấy chứng nhận đăng ký hợp tác xã; văn bằng b",hard,Common,166269-chunk-0017
+q_13,"What is discussed in this document about Điều 111. Trách nhiệm của các bộ, cơ quan ngang bộ?","Điều 111. Trách nhiệm của các bộ, cơ quan ngang bộ
+Các bộ, cơ quan ngang bộ, trong phạm vi, nhiệm vụ, quyền hạn của mình có trách nhiệm:
+1. Phối hợp với Bộ Tài chính trong việc xây dựng các chính sách, chế độ liên quan đến hoạt động kinh doanh bảo hiểm.
+2. Phối hợp với Bộ Tài chính trong việc kiểm t",easy,Common,112025-chunk-0166
+q_14,What is discussed in this document about Điều 6. Giấy phép này có hiệu lực kể từ ngày ký.?,Điều 6. Giấy phép này có hiệu lực kể từ ngày ký.,medium,Common,6e689cd0-6f81-11f1-94d6-fd5d6d5ff793-chunk-0057
+q_15,"What is discussed in this document about Điều 50. Quản lý vốn chủ sở hữu
+1. Trong suốt quá ?","Điều 50. Quản lý vốn chủ sở hữu
+1. Trong suốt quá trình hoạt động, doanh nghiệp bảo hiểm, chi nhánh nước ngoài, doanh nghiệp môi giới bảo hiểm phải bảo đảm duy trì nguồn vốn chủ sở hữu đáp ứng các nguyên tắc sau:
+a) Vốn chủ sở hữu của doanh nghiệp bảo hiểm, chi nhánh nước ngoài, doanh nghiệp môi giớ",hard,Common,112025-chunk-0084
