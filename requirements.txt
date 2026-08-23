@@ -24,6 +24,7 @@ google-genai==2.17.0
 # Utilities
 tqdm==4.67.1
 python-dotenv==1.1.0
+cryptography==50.0.0
 
 # Demo UI
 streamlit==1.48.1
