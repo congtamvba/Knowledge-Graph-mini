@@ -74,6 +74,17 @@ def generate_json(prompt: str) -> dict[str, Any] | list[Any] | None:
     return None
 
 
+def _sanitize_audit_query(query: str) -> str:
+    patterns = (
+        r"(?i)\b(?:api[_-]?key|token|secret|password)\s*[:=]\s*[^\s,;]+",
+        r"\bAIza[\w-]+\b",
+    )
+    sanitized = str(query)
+    for pattern in patterns:
+        sanitized = re.sub(pattern, "[REDACTED]", sanitized)
+    return sanitized
+
+
 def append_audit_event(*, action: str, query: str, user_role: str, rows: pd.DataFrame, status: str = "SUCCESS") -> str:
     request_id = str(uuid4())
     event = {
@@ -82,7 +93,7 @@ def append_audit_event(*, action: str, query: str, user_role: str, rows: pd.Data
         "user_id_demo": "buoi-19-demo",
         "user_role": user_role,
         "action": action,
-        "query": query,
+        "query": _sanitize_audit_query(query),
         "retrieval_method": "local-token-rank",
         "retrieved_document_ids": [str(value) for value in rows.get("document_id", pd.Series(dtype=str)).tolist()],
         "retrieved_chunk_ids": [str(value) for value in rows.get("chunk_id", pd.Series(dtype=str)).tolist()],
